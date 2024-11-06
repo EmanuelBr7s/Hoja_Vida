@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="/src/style/style.css">
 </head>
 <body>
+
     <!-- Header separado del contenedor principal -->
     <header>
         <div class="header-content">
@@ -18,9 +19,10 @@
     <div class="container">
         <section class="profile">
             <h3>PERFIL PERSONAL</h3>
-            <p>Como ingeniero de sistemas, estoy capacitado para la resolución de problemas y la optimización de sistemas informáticos, a su vez dar uso de mis conocimientos al servicio de la sociedad. Además, soy una persona sociable, capaz de integrarme en cualquier entorno, comprenderlo y adaptarme a él.</p>
-            <p>Mi capacidad <strong>Analítica</strong> me permite abordar desafíos complejos con precisión y eficiencia. A través de un enfoque <strong>meticuloso</strong>, descompongo problemas en componentes manejables y diseño soluciones efectivas. Este enfoque analítico me ha permitido llevar a cabo proyectos exitosos que han mejorado la eficiencia y la calidad de sistemas informáticos.</p>
-            <p>Mi compromiso es <strong>inquebrantable</strong>: siempre daré el máximo esfuerzo para asegurar que mi labor se cumple con excelencia. Estoy comprometido con la calidad e innovación en todo lo que hago, y considero que es fundamental contribuir de manera significativa a nuestro mundo en constante evolución.</p>
+            <p>Como ingeniero de sistemas, estoy capacitado para la resolución de problemas y la optimización de sistemas informáticos, a su vez dar uso de mis conocimientos
+                y la optimización de sistemas informáticos, a su vez dar uso de mis conocimientos al servicio de la sociedad.
+            </p><br>
+            <!-- El resto del contenido de perfil aquí -->
         </section>
 
         <aside class="sidebar">
@@ -38,9 +40,7 @@
             <div class="contacto">
                 <h3>CONTACTAME</h3>
                 <p>📞 (+57) 316 938 7050</p>
-                <p>📞 (+57) 310 726 3610</p>
                 <p>📧 barrancoreales29@gmail.com</p>
-                <p>🔗 Facebook: Emanuel Barranco Reales</p>
             </div>
 
             <div class="habilidades">
@@ -48,21 +48,38 @@
                 <ul>
                     <li><b>Innovador</b></li>
                     <li><b>Analítico</b></li>
-                    <li><b>Pensamiento Lógico-Sistémico</b></li>
-                    <li><b>Ingles Nivel B1</b></li>
-                    <li><b>Python, Java, C++, C#, JavaScript</b></li>
-                    <li><b>Excel</b></li>
+                    <li><b>Python, Java, C++, JavaScript</b></li>
+                    <!-- El resto de habilidades aquí -->
                 </ul>
             </div>
         </aside>
 
-        <section class="education">
-            <h3>EDUCACIÓN</h3>
-            <p><strong>Ingeniería de Sistema</strong><br>Universidad Libre Sección Barranquilla<br>(2023 - En curso)</p>
-            <p><strong>Diplomado Talento Tech</strong><br>Universidad Libre Sección Barranquilla<br>(2024-2024)</p>
-            <p><strong>Bachiller Académico</strong><br>Colegio Bilingüe Sagrada Sabiduría<br>(2016 - 2022)</p>
+        <!-- Formulario de contacto -->
+        <section class="contact-form">
+            <h3>Formulario de Contacto</h3>
+            <form id="contactForm">
+                <div>
+                    <label for="name">Nombre:</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div>
+                    <label for="email">Correo electrónico:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div>
+                    <label for="message">Mensaje:</label>
+                    <textarea id="message" name="message" required></textarea>
+                </div>
+                <button type="submit">Enviar</button>
+            </form>
         </section>
     </div>
+
+    <!-- Botón de bienvenida -->
+    <button  id="welcomeButton">Mostrar mensaje de bienvenida</button>
+
+    <script src="/src/scripts/script.js"></script>
 </body>
 </html>
+
 
