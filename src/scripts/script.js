@@ -14,6 +14,7 @@ form.addEventListener('submit', function(event) {
     }
 });
 
+
 // Función de bienvenida al hacer clic en el botón
 const welcomeButton = document.getElementById('welcomeButton');
 
