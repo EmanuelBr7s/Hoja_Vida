@@ -1,202 +1,237 @@
-/* Estilos generales */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+:root {
+    --color-primary: #1a237e;    /* Azul profundo */
+    --color-secondary: #7c4dff;  /* Violeta vibrante */
+    --color-gradient: #c2185b;   /* Rosa profundo para gradientes */
+    --color-light: #f5f5f7;      /* Gris claro elegante */
+    --color-dark: #1a1a1a;       /* Negro suave */
+    --color-success: #00c853;    /* Verde brillante */
+    --font-primary: 'Poppins', sans-serif;
+    --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
-    color: #333;
-    padding: 20px;
+    font-family: var(--font-primary);
+    background: var(--color-light);
+    color: var(--color-dark);
+    line-height: 1.6;
 }
 
-/* Header */
+/* Header espectacular */
 header {
-    text-align: center;
-    margin-bottom: 30px;
+    background: linear-gradient(135deg, var(--color-primary), var(--color-secondary), var(--color-gradient));
+    padding: 60px 20px;
+    border-radius: 0 0 50px 50px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    position: relative;
+    overflow: hidden;
+}
+
+header::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: radial-gradient(circle at 30% 107%, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.07) 5%, rgba(255, 255, 255, 0) 45%);
+}
+
+.header-content {
+    position: relative;
+    z-index: 1;
 }
 
 .header-content h1 {
-    font-size: 36px;
-    font-weight: bold;
+    font-size: 3.5rem;
+    font-weight: 700;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+    letter-spacing: -1px;
+    margin-bottom: 0.5rem;
 }
 
 .header-content h1 span {
-    color: #007bff;
+    display: block;
+    font-weight: 300;
+    font-size: 2.5rem;
+    opacity: 0.9;
 }
 
 .header-content h2 {
-    font-size: 24px;
-    font-weight: normal;
-    color: #666;
+    color: rgba(255, 255, 255, 0.9);
+    font-weight: 400;
+    font-size: 1.5rem;
+    margin-top: 1rem;
 }
 
-/* Contenedor principal */
+/* Contenedor principal con diseño moderno */
 .container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 20px;
-    max-width: 800px;
-    margin: 0 auto;
+    max-width: 1200px;
+    margin: 40px auto;
+    display: grid;
+    grid-template-columns: 1fr 300px;
+    gap: 30px;
+    padding: 0 20px;
 }
 
-/* Foto de perfil circular */
-.photo img {
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
-    object-fit: cover;
-    margin-bottom: 15px;
-}
-
-/* Perfil personal */
+/* Perfil renovado */
 .profile {
-    text-align: center;
-    line-height: 1.6;
+    background: white;
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.05);
+    transition: var(--transition);
+}
+
+.profile:hover {
+    transform: translateY(-5px);
 }
 
 .profile h3 {
-    font-size: 28px;
-    margin-bottom: 10px;
+    font-size: 1.8rem;
+    color: var(--color-primary);
+    margin-bottom: 1.5rem;
+    position: relative;
+    display: inline-block;
 }
 
-.profile p {
-    font-size: 16px;
-    color: #555;
+.profile h3::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background: linear-gradient(90deg, var(--color-secondary), var(--color-gradient));
+    border-radius: 3px;
 }
 
-/* Sidebar (datos de contacto y habilidades) */
+/* Sidebar moderna */
 .sidebar {
+    background: white;
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.05);
+}
+
+.photo img {
+    width: 180px;
+    height: 180px;
+    border-radius: 20px;
+    object-fit: cover;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    transition: var(--transition);
+}
+
+.photo img:hover {
+    transform: scale(1.05);
+}
+
+/* Habilidades con estilo */
+.habilidades ul li {
+    background: var(--color-light);
+    padding: 10px 20px;
+    border-radius: 12px;
+    margin: 8px 0;
+    transition: var(--transition);
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.habilidades ul li::before {
+    content: '▹';
+    color: var(--color-secondary);
+    margin-right: 10px;
+}
+
+.habilidades ul li:hover {
+    background: linear-gradient(135deg, var(--color-secondary), var(--color-gradient));
+    color: white;
+    transform: translateX(10px);
+}
+
+/* Formulario de contacto elegante */
+
+.contact-form {
+    /* ... tus estilos existentes ... */
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: #fff;
-    border-radius: 8px;
-    padding: 20px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-    width: 100%;
-    max-width: 300px;
-}
-
-.sidebar h3 {
-    font-size: 20px;
-    margin-bottom: 10px;
-    color: #007bff;
-}
-
-.sidebar p {
-    font-size: 14px;
-    margin-bottom: 5px;
-}
-
-.sidebar ul {
-    list-style-type: none;
-    padding-left: 0;
-}
-
-.sidebar ul li {
-    font-size: 14px;
-    margin-bottom: 5px;
-}
-
-.sidebar ul li strong {
-    color: #007bff;
-}
-
-/* Sección de educación */
-.education {
     text-align: center;
-    line-height: 1.6;
 }
 
-.education h3 {
-    font-size: 24px;
-    margin-bottom: 15px;
-    color: #007bff;
-}
-
-.education p {
-    font-size: 16px;
-    color: #555;
-}
-
-/* Estilos del formulario de contacto */
-.contact-form {
-    background-color: #fff;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+.contact-form form {
     width: 100%;
-    max-width: 500px;
-    margin: 20px auto;
+    max-width: 400px; /* Ajusta este valor según tus preferencias */
 }
 
-.contact-form h3 {
-    font-size: 24px;
-    color: #007bff;
-    margin-bottom: 15px;
+.contact-form div {
+    margin-bottom: 20px;
+    width: 100%;
 }
 
 .contact-form label {
-    font-size: 16px;
-    margin-bottom: 5px;
     display: block;
+    margin-bottom: 5px;
+    text-align: left;
 }
 
 .contact-form input,
 .contact-form textarea {
     width: 100%;
     padding: 10px;
-    font-size: 16px;
-    margin-bottom: 15px;
-    border: 1px solid #ddd;
     border-radius: 5px;
+    border: 1px solid #ccc;
 }
 
 .contact-form button {
     width: 100%;
-    font-size: 18px;
-    padding: 12px;
-    background-color: #007bff;
+    padding: 10px;
+    border-radius: 5px;
+    background: linear-gradient(135deg, var(--color-secondary), var(--color-gradient));
     color: white;
     border: none;
     cursor: pointer;
-    border-radius: 5px;
-    transition: background-color 0.3s ease;
-}
-
-.contact-form button:hover {
-    background-color: #0056b3;
-}
-
-/* Estilos del botón de bienvenida */
-button {
-    background-color: #007bff;
+}button {
+    background: linear-gradient(135deg, var(--color-secondary), var(--color-gradient));
     color: white;
+    padding: 15px 30px;
+    border-radius: 12px;
     border: none;
-    padding: 10px 20px;
+    font-weight: 600;
+    font-size: 1rem;
     cursor: pointer;
-    font-size: 16px;
-    border-radius: 5px;
-    transition: background-color 0.3s ease;
+    transition: var(--transition);
+    box-shadow: 0 10px 20px rgba(124, 77, 255, 0.2);
 }
 
 button:hover {
-    background-color: #0056b3;
+    transform: translateY(-3px);
+    box-shadow: 0 15px 30px rgba(124, 77, 255, 0.3);
 }
 
-/* Estilos responsivos */
-@media (max-width: 768px) {
-    .container {
-        flex-direction: column;
-        align-items: center;
-    }
+/* Animaciones y efectos */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
 
-    .sidebar {
-        width: 100%;
-        max-width: none;
+.profile, .sidebar, .contact-form {
+    animation: fadeIn 0.8s ease-out forwards;
+}
+
+/* Media queries mejorados */
+@media (max-width: 968px) {
+    .container {
+        grid-template-columns: 1fr;
+    }
+    
+    .header-content h1 {
+        font-size: 2.5rem;
+    }
+    
+    .header-content h1 span {
+        font-size: 2rem;
     }
 }
